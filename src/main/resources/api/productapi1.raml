@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: productAPI1
+version: v1
+types:
+  prod: !include DATATYPES/dataType.raml
+/production:
+  /{ID}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: prod
+              examples:
+                ex3: !include EXAMPLE/example.raml
